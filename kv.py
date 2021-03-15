@@ -5,10 +5,10 @@ table_location = 'excel\\a.xlsx' if platform.system() == 'Windows' else 'excel/a
 wb = xl.load_workbook(table_location)
 sh = wb[wb.sheetnames[0]]
 
-keys = list(range(2, 30, 2))
-values = list(range(3, 30, 2))
+keys = list(range(8, 10, 2))
+values = list(range(9, 10, 2))
 col_dict = {}
-current_new_col = 30
+current_new_col = 10
 
 for row in range(2, sh.max_row + 1):
 
