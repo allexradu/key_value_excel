@@ -11,7 +11,7 @@ wb = xl.Workbook()
 sh = wb[wb.sheetnames[0]]
 
 client_table_product_id_column = 1
-groups = range(1, 26)
+groups = range(1, 94)
 rule_id_index = 1
 build_row_index = 2
 
