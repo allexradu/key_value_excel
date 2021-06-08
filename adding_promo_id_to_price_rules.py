@@ -2,6 +2,9 @@ import openpyxl as xl
 import platform
 import json
 
+
+
+
 table_location = 'excel\\a.xlsx' if platform.system() == 'Windows' else 'excel/a.xlsx'
 wb = xl.load_workbook(table_location)
 sh = wb[wb.sheetnames[0]]
