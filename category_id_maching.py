@@ -4,7 +4,7 @@ import json
 from datetime import datetime
 
 table_location_edo = 'excel\\a_edo.xlsx' if platform.system() == 'Windows' else 'excel/a_edo.xlsx'
-table_location_max = 'excel\\a_max.xlsx' if platform.system() == 'Windows' else 'excel/a_max.xlsx'
+table_location_max = 'excel\\a_auto.xlsx' if platform.system() == 'Windows' else 'excel/a_auto.xlsx'
 table_location2 = 'excel\\a2.xlsx' if platform.system() == 'Windows' else 'excel/a2.xlsx'
 wb_edo = xl.load_workbook(table_location_edo)
 sh_edo = wb_edo[wb_edo.sheetnames[0]]
@@ -102,7 +102,6 @@ for code in cat4_edo.keys():
         row_index += 1
 
 print(cat1_edo)
-
 
 # for row in range(2, len(cat3_edo.keys()) + 2):
 #     cat4_code = list(cat4_edo.keys())[row - 2]
