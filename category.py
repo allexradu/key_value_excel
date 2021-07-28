@@ -3,7 +3,7 @@ import platform
 import json
 from datetime import datetime
 
-table_location = 'excel\\a_edo.xlsx' if platform.system() == 'Windows' else 'excel/a_edo.xlsx'
+table_location = 'excel\\b_max.xlsx' if platform.system() == 'Windows' else 'excel/b_max.xlsx'
 table_location2 = 'excel\\a2.xlsx' if platform.system() == 'Windows' else 'excel/a2.xlsx'
 wb = xl.load_workbook(table_location)
 sh = wb[wb.sheetnames[0]]
@@ -48,5 +48,9 @@ for row in range(2, len(cat3.keys()) + 2):
     sh_build.cell(row, 2).value = cat2[cat2_code]
     cat1_code = parent[cat2_code]
     sh_build.cell(row, 1).value = cat1[cat1_code]
+    sh_build.cell(row, 5).value = cat1_code
+    sh_build.cell(row, 6).value = cat2_code
+    sh_build.cell(row, 7).value = cat3_code
+    sh_build.cell(row, 8).value = cat4_code
 
 wb_build.save(table_location2)
